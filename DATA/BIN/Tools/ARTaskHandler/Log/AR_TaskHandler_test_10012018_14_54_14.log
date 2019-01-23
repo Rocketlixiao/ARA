@@ -1,4 +1,0 @@
-1/10/2018 2:54:14 PM	ERROR: System.Exception: ERROR: Mandatory setting(s) missing QueryMatchedSummary
-   at AR_TaskHandler.TaskItemSummaryReport.Perform()
-   at AR_TaskHandler.Tasks.Perform()
-   at AR_TaskHandler.Program.Main(String[] args)

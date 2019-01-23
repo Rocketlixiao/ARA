@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<LogFile>Log\UNMARK_FOR_REPORT_{0:yyyyMMdd_hhmmss}.LOG</LogFile>
-	<TaskItem xsi:type="TaskItemQuery">
-		<Name>Unmark for report</Name>
-		<Query>TRUNCATE TABLE [dbo].[Mark_for_report]</Query>
-	</TaskItem>
-</Tasks>
