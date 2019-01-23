@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<LogFile>Log\CurrencyRates_{0:yyyyMMdd_hhmmss}.LOG</LogFile>
+	<TaskItem xsi:type="TaskItemLoadData">
+		<Name>Currency Rates Load</Name>
+		<MonitoringId>80</MonitoringId>
+		<MonitoringEnabled>True</MonitoringEnabled>
+		<LoadType>EXCEL</LoadType>
+		<InputFile>Input\AandPrates.xlsx</InputFile>
+		<DestinationTable>Currency_Rates_tmp</DestinationTable>
+		<Truncate>True</Truncate>
+		<UseHeader>False</UseHeader>
+		<HeaderRowNumber>3</HeaderRowNumber>
+		<ColumnsToLoad>1,2,3,4</ColumnsToLoad>
+		<ColumnsMapping>1=Name,2=ISO_Code,3=Rate,4=Base</ColumnsMapping>
+		<SheetPosition>0</SheetPosition>
+		<ArchiveDir>Archive</ArchiveDir>
+	</TaskItem>
+	<TaskItem xsi:type="TaskItemQuery">
+		<Name>Currency Rates Transform</Name>
+		<Enabled>True</Enabled>
+		<Query>sp_Currency_Transform</Query>
+		<QueryType>StoredProcedure</QueryType>
+	</TaskItem>
+	
+</Tasks>

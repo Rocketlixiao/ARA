@@ -1,0 +1,102 @@
+12/28/2018 2:07:10 PM	ERROR generating report for deal '_Not_Applicable':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.ArgumentException: '', hexadecimal value 0x1A, is an invalid character.
+   at System.Xml.XmlUtf8RawTextWriter.InvalidXmlChar(Int32 ch, Byte* pDst, Boolean entitize)
+   at System.Xml.XmlUtf8RawTextWriter.WriteElementTextBlock(Char* pSrc, Char* pSrcEnd)
+   at System.Xml.XmlUtf8RawTextWriter.WriteString(String text)
+   at System.Xml.XmlWellFormedWriter.WriteString(String text)
+   at DocumentFormat.OpenXml.OpenXmlLeafTextElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlCompositeElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElement(OpenXmlElement elementObject)
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 541
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 577
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 184
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 319
+   at AR_TaskHandler.TaskItemARReport.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 519
+12/28/2018 2:51:37 PM	ERROR generating report for deal 'ERICSSON':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.ArgumentException: '.', hexadecimal value 0x00, is an invalid character.
+   at System.Xml.XmlUtf8RawTextWriter.InvalidXmlChar(Int32 ch, Byte* pDst, Boolean entitize)
+   at System.Xml.XmlUtf8RawTextWriter.WriteElementTextBlock(Char* pSrc, Char* pSrcEnd)
+   at System.Xml.XmlUtf8RawTextWriter.WriteString(String text)
+   at System.Xml.XmlWellFormedWriter.WriteString(String text)
+   at DocumentFormat.OpenXml.OpenXmlLeafTextElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlCompositeElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElement(OpenXmlElement elementObject)
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 541
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 577
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 184
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 319
+   at AR_TaskHandler.TaskItemARReport.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 519
+12/28/2018 3:02:30 PM	ERROR generating report for deal 'PHILIPS ROYAL':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.ArgumentException: '', hexadecimal value 0x1A, is an invalid character.
+   at System.Xml.XmlUtf8RawTextWriter.InvalidXmlChar(Int32 ch, Byte* pDst, Boolean entitize)
+   at System.Xml.XmlUtf8RawTextWriter.WriteElementTextBlock(Char* pSrc, Char* pSrcEnd)
+   at System.Xml.XmlUtf8RawTextWriter.WriteString(String text)
+   at System.Xml.XmlWellFormedWriter.WriteString(String text)
+   at DocumentFormat.OpenXml.OpenXmlLeafTextElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlCompositeElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElement(OpenXmlElement elementObject)
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 541
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 577
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 184
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 319
+   at AR_TaskHandler.TaskItemARReport.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 519
+12/28/2018 3:06:28 PM	ERROR generating report for deal 'WARTSILA CORPORATION':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.ArgumentException: '.', hexadecimal value 0x00, is an invalid character.
+   at System.Xml.XmlUtf8RawTextWriter.InvalidXmlChar(Int32 ch, Byte* pDst, Boolean entitize)
+   at System.Xml.XmlUtf8RawTextWriter.WriteElementTextBlock(Char* pSrc, Char* pSrcEnd)
+   at System.Xml.XmlUtf8RawTextWriter.WriteString(String text)
+   at System.Xml.XmlWellFormedWriter.WriteString(String text)
+   at DocumentFormat.OpenXml.OpenXmlLeafTextElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlCompositeElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElement(OpenXmlElement elementObject)
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 541
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 577
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 184
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 319
+   at AR_TaskHandler.TaskItemARReport.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 519
+12/28/2018 3:28:29 PM	ERROR generating report for deal 'SKF':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.ArgumentException: '.', hexadecimal value 0x00, is an invalid character.
+   at System.Xml.XmlUtf8RawTextWriter.InvalidXmlChar(Int32 ch, Byte* pDst, Boolean entitize)
+   at System.Xml.XmlUtf8RawTextWriter.WriteElementTextBlock(Char* pSrc, Char* pSrcEnd)
+   at System.Xml.XmlUtf8RawTextWriter.WriteString(String text)
+   at System.Xml.XmlWellFormedWriter.WriteString(String text)
+   at DocumentFormat.OpenXml.OpenXmlLeafTextElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlCompositeElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElement(OpenXmlElement elementObject)
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 541
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 577
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 184
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 319
+   at AR_TaskHandler.TaskItemARReport.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 519
+12/28/2018 3:53:38 PM	ERROR generating report for deal 'Rothschild':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.ArgumentException: '.', hexadecimal value 0x00, is an invalid character.
+   at System.Xml.XmlUtf8RawTextWriter.InvalidXmlChar(Int32 ch, Byte* pDst, Boolean entitize)
+   at System.Xml.XmlUtf8RawTextWriter.WriteElementTextBlock(Char* pSrc, Char* pSrcEnd)
+   at System.Xml.XmlUtf8RawTextWriter.WriteString(String text)
+   at System.Xml.XmlWellFormedWriter.WriteString(String text)
+   at DocumentFormat.OpenXml.OpenXmlLeafTextElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlCompositeElement.WriteContentTo(XmlWriter w)
+   at DocumentFormat.OpenXml.OpenXmlElement.WriteTo(XmlWriter xmlWriter)
+   at DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElement(OpenXmlElement elementObject)
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 541
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\ExportToXlsx.cs:line 577
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 184
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 319
+   at AR_TaskHandler.TaskItemARReport.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARReport.cs:line 519

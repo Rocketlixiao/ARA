@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<LogFile>Log\TEST_REPORT_NL_AMS_{0:yyyyMMdd_hhmmss}.LOG</LogFile>
+	<TaskItem xsi:type="TaskItemARMassChange">
+		<Name>AMS submission</Name>
+		<Region>AMS</Region>
+		<Enabled>True</Enabled>
+		<MonitoringEnabled>False</MonitoringEnabled>
+		<OutputFileAssetGroup>Output\{1:N0} Records {2} Pyramid Mass Change Form - Asset Group - {0:ddMMMyyyy}.xlsx</OutputFileAssetGroup>
+		<OutputFileSerialNumber>Output\{1:N0} Records {2} Pyramid Mass Change Form - Serial Number - {0:ddMMMyyyy}.xlsx</OutputFileSerialNumber>
+		<OutputFileParent>Output\{2}_Investigation_{0:ddMMMyyyy}.xlsx</OutputFileParent>
+		<SheetAssetGroup>Mass Change Form</SheetAssetGroup>
+		<SheetSerialNumber>Mass Change Form</SheetSerialNumber>
+		<SheetParent>Parents</SheetParent>
+		<TemplateFileAssetGroup>Templates\template_pmcf_asset_group.xlsx</TemplateFileAssetGroup>
+		<TemplateFileSerialNumber>Templates\template_pmcf_serial_number.xlsx</TemplateFileSerialNumber>
+		<TemplateFileParent>Templates\template_report.xlsx</TemplateFileParent>
+		<SMTPserver>smtp-emea.svcs.hpe.com</SMTPserver>
+		<EmailFrom>ara.ams@dxc.com</EmailFrom>
+		<EmailTo>xiao.li@dxc.com</EmailTo>
+		<EmailCC></EmailCC>
+		<EmailSubject>{0:MM/dd/yyyy} New weekly leases submission to Review ({1})</EmailSubject>
+		<EmailBody>FILE:Configs\body.html</EmailBody>
+		<EmailBodyEmpty>FILE:Configs\emptyBody.html</EmailBodyEmpty>
+		<HTMLDataRow>FILE:Configs\HTMLDataRow.html</HTMLDataRow>
+		<HTMLSummaryRow>FILE:Configs\HTMLSummaryRow.html</HTMLSummaryRow>
+		<QueryAssetGroup>EXEC sp_Submission_AssetGroup 'nl','{0}'</QueryAssetGroup>
+		<QuerySerialNumber>EXEC sp_Submission_SerialNumber 'nl', '{0}'</QuerySerialNumber>
+		<QueryParent>EXEC sp_Submission_Investigation 'nl', '{0}'</QueryParent>
+		<QueryDeals>EXEC sp_Submission_PerDealSummary 'nl', '{0}'</QueryDeals>
+	</TaskItem>
+</Tasks>

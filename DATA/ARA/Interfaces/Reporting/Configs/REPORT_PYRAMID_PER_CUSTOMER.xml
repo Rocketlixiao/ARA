@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<LogFile>Log\PYRAMID_PER_CUSTOMER\Pyramid_per_customer_{0:yyyyMMdd_hhmmss}.LOG</LogFile> 
+	<TaskItem xsi:type="TaskItemARReport">
+		<Name>REPORTS_PYRAMID_PER_CUSTOMER</Name>
+		<OutputFile>Output\PyramidPerCustomer\{0}.xlsx</OutputFile>
+		<Sheet>Sheet1</Sheet>
+		<TemplateFile></TemplateFile><!--Templates\template_Exp_Pyramid_Per_Customer.xlsx-->
+		<emailEnabled>False</emailEnabled>
+		<Enabled>True</Enabled>
+		<!--<Query>SELECT * from v_reports_Pyramid_Per_Customer WHERE [Responsible Entity Name] = '{0}'</Query>-->
+		<Query>exec sp_Pyramid_per_customer '{0}'</Query>
+		<DealsList>PyramidPerCostumer</DealsList> <!-- toto treba pridat do ostatnych reportov -->
+		<QueryDeals>
+		SELECT [Responsible Entity], [Responsible Entity Name], [Region], [Asset Manager] FROM (
+			SELECT '_NA' AS [Responsible Entity], '_Not_Applicable' AS [Responsible Entity Name], 'EMEA' AS [Region], '' AS [Asset Manager], 100000000 as cnt
+			UNION ALL
+			SELECT a.[Responsible Entity],a.[Responsible Entity Name],a.[Region],a.[Asset Manager], p.cnt FROM account_regions a
+				INNER JOIN (Select idAccount, count(1) cnt FROM Pyramid group by idAccount) p ON a.ID = p.idAccount where a.Region = 'EMEA'
+			UNION ALL
+			SELECT 'cap' as [Responsible Entity], p.[Responsible Entity Name], 'EMEA' as [Region], '' AS [Asset Manager], count(1) as cnt FROM Pyramid p
+			where p.[Responsible Entity Name] like '%capability%' and p.[Pyramid Region] = 'EMEA'
+			group by p.[Responsible Entity Name]
+		) x order by cnt desc
+		</QueryDeals>
+	<!--  <DealMinCost>100000</DealMinCost> -->
+		<MonitoringId>62</MonitoringId>
+		<MonitoringEnabled>True</MonitoringEnabled>
+		<ZipFiles>False</ZipFiles>
+	</TaskItem>
+</Tasks>

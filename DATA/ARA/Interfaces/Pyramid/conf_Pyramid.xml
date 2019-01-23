@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <LogFile>Log\Pyramid_{0:yyyyMMdd_hhmmss}.LOG</LogFile>
+    <TaskItem xsi:type="TaskItemLoadData">
+      <Name>Pyramid_load</Name>
+      <LoadType>CSV</LoadType>
+      <DestinationTable>[dbo].[Pyramid_EMEA]</DestinationTable>
+      <InputFile>Input\Pyramid_EMEA.csv</InputFile>
+      <MonitoringName>Pyramid Load</MonitoringName>
+    </TaskItem>
+    <TaskItem xsi:type="TaskItemQuery">
+      <Name>Pyramid_transform</Name>
+      <Enabled>False</Enabled>
+      <Query>sp_Pyramid_transform_Y</Query>
+	  <QueryType>StoredProcedure</QueryType>
+    </TaskItem>
+</Tasks>

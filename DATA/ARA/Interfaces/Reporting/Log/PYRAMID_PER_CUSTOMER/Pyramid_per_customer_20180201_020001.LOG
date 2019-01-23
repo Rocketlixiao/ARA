@@ -1,0 +1,45 @@
+2/1/2018 2:18:29 PM	ERROR generating report for deal 'E.ON IT AG.':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.Data.SqlClient.SqlException: Transaction (Process ID 56) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex)
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex)
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile)
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal)
+   at AR_TaskHandler.TaskItemARReport.Perform()
+2/1/2018 2:27:36 PM	ERROR generating report for deal 'COMMERZBANK AG':
+System.Exception: Error whilst creating Excel from SqlDataReader. ---> System.Data.SqlClient.SqlException: Transaction (Process ID 56) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex)
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.ExportToXlsx.AddDataToExistingSheetSAX(String docName, String sheetName, SqlDataReader sqlreader, Boolean insertHeader, UInt32 rowIndex)
+   at AR_TaskHandler.TaskItemARReport.CreateReportExcel(String outputFile, String sheetName, DealParameters deal, String query, String templateFile)
+   at AR_TaskHandler.TaskItemARReport.PerformForDeal(DealParameters deal)
+   at AR_TaskHandler.TaskItemARReport.Perform()
+2/1/2018 2:27:42 PM	ERROR: System.Data.SqlClient.SqlException (0x80131904): Transaction (Process ID 59) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at AR_TaskHandler.TaskItem.MonitoringUpdate(Int32 iCurrent, Int32 iError, Int32 iFatal, Int32 iIgnored, Int32 iInserted, Int32 iUpdated, Int32 iCnt)
+   at AR_TaskHandler.TaskItemARReport.Perform()
+   at AR_TaskHandler.Tasks.Perform()
+   at AR_TaskHandler.Program.Main(String[] args)
+ClientConnectionId:19c8dc58-73ef-44ff-a61e-6800854227c7
