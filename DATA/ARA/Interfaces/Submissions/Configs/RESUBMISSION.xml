@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<LogFile>Log\RESUBMISSION_{0:yyyyMMdd_hhmmss}.LOG</LogFile>
+	<TaskItem xsi:type="TaskItemQuery">
+		<Name>Resubmission</Name>
+		<Query>sp_Resubmit_Reported_Records</Query>
+		<QueryType>StoredProcedure</QueryType>
+		<Enabled>True</Enabled>
+	</TaskItem>
+</Tasks>

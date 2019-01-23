@@ -1,0 +1,7 @@
+3/2/2018 12:01:19 PM	AR_TaskHandler.EmailRecipientFailureException: Email recipient failure!  ---> System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: 4.1.1 <reinaldo.ballestero.sibaja@hpe.com>: Recipient address rejected: unverified address: Recipient address lookup failed.
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at AR_TaskHandler.EmailModule.SendSmtpMail(MailAddress[] Recipients, String Subject, String Body, Attachment[] Files, MailAddress[] CarbonCopies, MailAddress[] BCarbonCopies) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\EmailModule.cs:line 143
+   at AR_TaskHandler.TaskItemARMassChange.SendEmail(String[] recipients, String[] attachments, String subject, String body, String[] carbonCopies, String[] BCCopies) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARMassChange.cs:line 324
+   at AR_TaskHandler.TaskItemARMassChange.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARMassChange.cs:line 561
+   --- End of inner exception stack trace ---
+   at AR_TaskHandler.TaskItemARMassChange.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemARMassChange.cs:line 580

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<LogFile>Log\Post_NL_procs_{0:yyyyMMdd_hhmmss}.LOG</LogFile>
+	<TaskItem xsi:type="TaskItemQuery">
+		<Name>Pyramid set parent/child</Name>
+		<Enabled>True</Enabled>
+		<Query>sp_Set_childs</Query>
+		<QueryType>StoredProcedure</QueryType>
+	</TaskItem>
+	<TaskItem xsi:type="TaskItemQuery">
+		<Name>Pyramid set REN</Name>
+		<Enabled>True</Enabled>
+		<Query>sp_Set_REN</Query>
+		<QueryType>StoredProcedure</QueryType>
+	</TaskItem>
+	<TaskItem xsi:type="TaskItemQuery">
+		<Name>RLS Update</Name>
+		<Enabled>True</Enabled>
+		<Query>sp_RLS_update</Query>
+		<QueryType>StoredProcedure</QueryType>
+	</TaskItem>
+</Tasks>

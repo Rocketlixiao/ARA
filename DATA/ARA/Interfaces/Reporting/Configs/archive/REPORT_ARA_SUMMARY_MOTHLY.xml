@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<TaskItem xsi:type="TaskItemSummaryReport">
+		<Name>ARA Summary Report</Name>
+		<MonitoringId>43</MonitoringId>
+		<MonitoringName>Summary Report Monthly</MonitoringName>
+		<Enabled>True</Enabled>
+		<OutputFile>Output\ARASummaryReport\ARA Summary Report {0:ddMMyyyy}.xlsx</OutputFile>
+		<SheetMatched>Matched Report</SheetMatched>
+		<SheetMapped>Mapped Report</SheetMapped>
+		<TemplateFileSummaryReport>Templates\template_ARA_summary_report.xlsx</TemplateFileSummaryReport>
+		<Period>month</Period>
+		<SMTPserver>smtp-emea.svcs.hpe.com</SMTPserver>
+		<EmailFrom>d3.ams@hpe.com</EmailFrom>
+		<EmailTo>roisin.breiner@hpe.com;lubos.gajdosik@hpe.com;patrik.kovacs@hpe.com;mkeller@hpe.com</EmailTo>
+		<EmailCC></EmailCC>
+		<EmailTest>False</EmailTest>
+		<EmailSubject>{0} ARA summary report</EmailSubject>
+		<EmailBody>&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+&lt;!--
+ /* Font Definitions */
+ @font-face
+	{{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}}
+@font-face
+	{{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}}
+.MsoChpDefault
+	{{font-family:"Calibri",sans-serif;}}
+.MsoPapDefault
+	{{margin-bottom:8.0pt;
+	line-height:107%;}}
+.MsoListParagraph
+	{{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}}
+@page WordSection1
+	{{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}}
+div.WordSection1
+	{{page:WordSection1;}}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body lang=EN-US&gt;
+&lt;div class=WordSection1&gt;
+&lt;p class=MsoNormal&gt;Hello,&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;Pls. find attached ARA summary report for last {0}.&lt;/p&gt;
+&lt;p class=MsoNormal&gt;There are 2 tabs - matched and mapped results.&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=420&gt;
+ &lt;tr style='height:15.0pt'&gt;
+  &lt;td width=187 nowrap style='width:200pt;border:solid windowtext 1.0pt;background:#92D050;padding:0in 5.4pt 0in 5.4pt;height:14.35pt'&gt;
+   &lt;p class=MsoNormal&gt;&lt;span style='color:black'&gt;Report type&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=161 nowrap valign=bottom style='width:120pt;border:solid windowtext 1.0pt;border-left:none;background:#92D050;padding:0in 5.4pt 0in 5.4pt;height:14.35pt'&gt;
+   &lt;p class=MsoNormal&gt;&lt;span style='color:black'&gt;Count&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=100 nowrap style='width:100pt;border:solid windowtext 1.0pt;border-left:none;background:#92D050;padding:0in 5.4pt 0in 5.4pt;height:14.35pt'&gt;
+   &lt;p class=MsoNormal align=center style='text-align:center'&gt;&lt;span style='color:black'&gt;RLS in &lt;b&gt;$ :&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt; 
+ {1}
+&lt;/table&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;If you have any question do not hesitate to contact us.&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;Thanks in advance&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;BR,&lt;/p&gt;
+&lt;p class=MsoNormal&gt;ARA team&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+		</EmailBody>
+		<EmailBodyEmpty>
+		&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+&lt;!--
+ /* Font Definitions */
+ @font-face
+	{{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}}
+@font-face
+	{{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}}
+.MsoChpDefault
+	{{font-family:"Calibri",sans-serif;}}
+.MsoPapDefault
+	{{margin-bottom:8.0pt;
+	line-height:107%;}}
+.MsoListParagraph
+	{{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}}
+@page WordSection1
+	{{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}}
+div.WordSection1
+	{{page:WordSection1;}}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body lang=EN-US&gt;
+&lt;div class=WordSection1&gt;
+&lt;p class=MsoNormal&gt;Hello,&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;There were no submissions last {0}.&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;If you have any question do not hesitate to contact us.&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;Thanks in advance&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=MsoNormal&gt;BR,&lt;/p&gt;
+&lt;p class=MsoNormal&gt;ARA team&lt;/p&gt;
+&lt;p class=MsoNormal&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+		</EmailBodyEmpty>
+		<QueryMappedSummary>
+		select P.[Responsible Entity Name], [Reported_Date],count(*) as [Count], sum(cost_new) as [RLS($)] from v_pyramid p
+join [dbo].[Account_regions] A on A.[Responsible Entity Name] = P.[Responsible Entity Name]
+where P.[Reported_Date] >= DATEADD(day, -30, Convert(date,  GETDATE())) and A.[Region] = 'EMEA' and matched in (0,2)
+group by P.[Responsible Entity Name],[Reported_Date]
+Union
+select 
+case
+	when P.[Responsible Entity Name] IS NULL then 'UNKNOWN'
+	else P.[Responsible Entity Name]
+end as [Responsible Entity Name],[Reported_Date],count(*) as [Count], sum(cost_new) as [RLS($)] from v_pyramid p
+where P.[Reported_Date] >= DATEADD(day, -30, Convert(date,  GETDATE())) and P.[Pyramid Region] = 'EMEA' and matched in (0,2) and [Responsible Entity Name] is null
+group by P.[Responsible Entity Name],[Reported_Date]
+		</QueryMappedSummary>
+		<QueryMatchedSummary>
+		select P.[Responsible Entity Name], [Reported_Date], count(*) as [Count], sum(cost_new) as [RLS($)] from v_pyramid p
+join [dbo].[Account_regions] A on A.[Responsible Entity Name] = P.[Responsible Entity Name]
+where P.[Reported_Date] >= DATEADD(day, -30, Convert(date,  GETDATE())) and A.[Region] = 'EMEA' and matched = 1
+group by P.[Responsible Entity Name],[Reported_Date]
+Union
+select  
+case
+	when P.[Responsible Entity Name] IS NULL then 'UNKNOWN'
+	else P.[Responsible Entity Name]
+end as [Responsible Entity Name],[Reported_Date],count(*) as [Count],sum(cost_new) as [RLS($)] from v_pyramid p
+where P.[Reported_Date] >= DATEADD(day, -30, Convert(date,  GETDATE())) and P.[Pyramid Region] = 'EMEA' and matched = 1 and [Responsible Entity Name] is null
+group by P.[Responsible Entity Name],[Reported_Date]
+		</QueryMatchedSummary>
+    </TaskItem>
+</Tasks>

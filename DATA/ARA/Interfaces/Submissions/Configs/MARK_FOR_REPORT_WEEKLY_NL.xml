@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<LogFile>Log\MARK_FOR_REPORT_{0:yyyyMMdd_hhmmss}.LOG</LogFile>
+	<TaskItem xsi:type="TaskItemQuery">
+		<Name>Mark_for_report</Name>
+		<Query>sp_Mark_for_Report</Query>
+		<QueryType>StoredProcedure</QueryType>
+		<Enabled>True</Enabled>
+		<Parameter>
+			<Key>type</Key>
+			<Value xsi:type="xsd:string">nl</Value>
+		</Parameter>
+	</TaskItem>
+</Tasks>

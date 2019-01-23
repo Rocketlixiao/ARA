@@ -1,0 +1,5 @@
+12/25/2018 8:22:44 AM	ERROR: System.IO.FileNotFoundException: Unable to find input file Input\HPES_Asset_Reconciliation_Data_Weekly_Bookings_PyramidEA.csv
+   at AR_TaskHandler.TaskItemLoadData.PerformCSVLoad() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemLoadData.cs:line 281
+   at AR_TaskHandler.TaskItemLoadData.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemLoadData.cs:line 452
+   at AR_TaskHandler.Tasks.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\Tasks.cs:line 418
+   at AR_TaskHandler.Program.Main(String[] args) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\Program.cs:line 346

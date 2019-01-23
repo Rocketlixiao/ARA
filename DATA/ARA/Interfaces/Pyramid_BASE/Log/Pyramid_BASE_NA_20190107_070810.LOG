@@ -1,0 +1,30 @@
+1/7/2019 7:08:50 AM	ERROR: System.Data.OperationAbortedException: Operation aborted due to an exception (see InnerException for details). ---> System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at AR_TaskHandler.TaskItem.MonitoringUpdate(Int32 iCurrent, Int32 iError, Int32 iFatal, Int32 iIgnored, Int32 iInserted, Int32 iUpdated, Int32 iCnt) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\Tasks.cs:line 357
+   at AR_TaskHandler.TaskItem.OnSqlRowsCopied(Object sender, SqlRowsCopiedEventArgs e) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\Tasks.cs:line 228
+   at System.Data.SqlClient.SqlBulkCopy.OnRowsCopied(SqlRowsCopiedEventArgs value)
+   at System.Data.SqlClient.SqlBulkCopy.FireRowsCopiedEvent(Int64 rowsCopied)
+   at System.Data.SqlClient.SqlBulkCopy.CheckAndRaiseNotification()
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlBulkCopy.CheckAndRaiseNotification()
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(IDataReader reader)
+   at AR_TaskHandler.TaskItemLoadData.PerformCSVLoad() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemLoadData.cs:line 308
+   at AR_TaskHandler.TaskItemLoadData.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\TaskItemLoadData.cs:line 452
+   at AR_TaskHandler.Tasks.Perform() in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\Tasks.cs:line 418
+   at AR_TaskHandler.Program.Main(String[] args) in d:\!!!WORK\Tickets\_AR_TaskHandler\AR_TaskHandler\Program.cs:line 346
